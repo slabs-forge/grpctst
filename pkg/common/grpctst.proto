@@ -1,0 +1,17 @@
+syntax="proto3";
+
+option go_package = "github.com/slabs-forge/grpctst/pkg/common";
+
+package common;
+
+service GrpcTest {
+    rpc Test(TestRequest) returns (TestResponse) {}
+}
+
+message TestRequest {
+    string message = 1;
+}
+
+message TestResponse {
+    string message = 1;
+}
